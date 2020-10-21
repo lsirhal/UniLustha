@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>UniLustha - Site Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App css -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/icons.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/app.min.css}" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+    <div class="navbar-custom">
+        <ul class="list-unstyled topnav-menu float-right mb-0">
+
+            <li class="d-none d-sm-block">
+                <form class="app-search">
+                    <div class="app-search-box">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar...">
+                            <div class="input-group-append">
+                                <button class="btn" type="submit">
+                                    <i class="fe-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <img th:src="@{/images/users/user-1.jpg}" alt="user-image" class="rounded-circle">
+                    <span class="pro-user-name ml-1">
+                        Marcelo <i class="mdi "></i> 
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- LOGO -->
+        <div class="logo-box">
+            <a href="index.html" class="logo text-center">
+                <span class="logo-lg">
+                    <img th:src="@{/images/logo-deitada.jpg}" alt="" height="90">
+                    <!-- <span class="logo-lg-text-light">Xeria</span> -->
+                </span>
+                <span class="logo-sm">
+                    <!-- <span class="logo-sm-text-dark">X</span> -->
+                    <img th:src="@{/images/logo-sm.jpg}" alt="" height="40">
+                </span>
+            </a>
+        </div>
+
+        <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+            <li>
+                <button class="button-menu-mobile disable-btn waves-effect">
+                    <i class="fe-menu"></i>
+                </button>
+            </li>
+        </ul>
+
+    </div>
+    <!-- end Topbar -->
+
+    <!-- =================== Left Sidebar Start =================== -->
+    <div class="left-side-menu">
+
+        <div class="slimscroll-menu">
+
+            <!-- User box -->
+            <div class="user-box text-center">
+                <img th:src="@{/images/users/user-1.jpg}" alt="user-img" title="Mat Helme" class="rounded-circle img-thumbnail avatar-lg">
+                <div class="dropdown">
+                    <a href="#" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">Marcelo Estruc</a>
+
+                    <div class="dropdown-menu user-pro-dropdown">   
+                    </div>
+
+                </div>
+                <p class="text-muted"> Administrador</p>
+
+            </div>
+
+            <!--------------- Sidebar -------------->
+            <div id="sidebar-menu">
+
+                <ul class="metismenu" id="side-menu">
+
+                    <li class="menu-title">Navegação</li>
+
+                    <li>
+                        <a th:href="@{/principal}">
+                            <i class="mdi mdi-view-dashboard"></i>
+                            <span> Tela Inicial </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="mdi mdi-layers"></i>
+                            <span> Alunos </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a th:href="@{/aluno/cadastrar}">Cadastrar Aluno</a></li>
+                            <li><a th:href="@{/aluno/listar}">Listar Alunos</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="mdi mdi-layers"></i>
+                            <span> Cursos </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a th:href="@{/curso/cadastrar}">Cadastrar Curso</a></li>
+                            <li><a th:href="@{/curso/listar}">Listar Curso</a></li>                            
+                        </ul>                        
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="mdi mdi-layers"></i>
+                            <span> Materia </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a th:href="@{/materia/cadastrar}">Cadastrar Materia</a></li>
+                            <li><a th:href="@{/materia/listar}">Listar Materias</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="mdi mdi-layers"></i>
+                            <span> Avaliacao </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a th:href="@{/avaliacao/cadastrar}">Cadastrar Avaliacao</a></li>
+                            <li><a th:href="@{/avaliacao/listar}">Listar Avaliacao</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="mdi mdi-layers"></i>
+                            <span> Modulos </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a th:href="@{/modulo/cadastrar}">Cadastrar modulo</a></li>
+                            <li><a th:href="@{/modulo/listar}">Listar Modulo</a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i class="mdi mdi-layers"></i>
+                            <span> Turma </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a th:href="@{/turma/cadastrar}">Cadastrar Turma</a></li>
+                            <li><a th:href="@{/turma/listar}">Listar Turmas</a></li>
+                            
+                        </ul>
+                    </li>                    
+                </ul>
+            </div>
+            <!-- End Sidebar -->
+
+            <div class="clearfix"></div>
+
+        </div>
+        <!-- Sidebar -left -->
+
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+    <!-- Start Content-->
+
+
+    <div class="content-page">
+       
+        <!-- end row -->
+	 <h2>Lista de Cursos Cadastrados</h2>
+                     				<div class="table-responsive">
+                                        <table class="table mb-0">
+                                            <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nome</th>
+                                                <th>Descrição</th>
+                                                <th>Modalidade</th>
+                                                <th>Carga Horária</th>
+                                                <th>Duração</th>
+                                                <th>Alterar/Excluir</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr th:each="curso : ${cursos}" scope="row">                                              
+                                                <td th:text="${curso.id}"></td>
+                                                <td th:text="${curso.nome}"></td>
+                                                <td th:text="${curso.descricao}"></td>
+                                                <td th:text="${curso.modalidade}"></td>
+                                                <td th:text="${curso.carga_h}"></td>
+                                                <td th:text="${curso.duracao}"></td>
+                                               <td>
+                                                   	<div class="btn-group pull-right">
+														<a class="btn btn-icon waves-effect waves-light btn-info" th:href="@{/curso/alterar/{idCurso}(idCurso=${curso.id})}">  <i class="mdi mdi-account-edit"></i> </a> 
+														<a class="btn btn-icon waves-effect waves-light btn-danger" th:href="@{/curso/excluir/{idCurso}(idCurso=${curso.id})}"> <i class=" mdi mdi-close"></i> </a>
+													</div>
+												</td>	
+                                            </tr>                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                      &copy;UniLustha 2012 - 2020. Todos os direitos reservados.
+                  </div>
+                  <div class="col-md-6">
+                    <div class="text-md-right footer-links d-none d-sm-block">
+                        <a href="javascript:void(0);">Sobre</a>
+                        <a href="javascript:void(0);">Ajuda</a>
+                        <a href="javascript:void(0);">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+
+</div>
+
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- Vendor js -->
+<script th:src="@{/js/vendor.min.js}"></script>
+
+        <!-- Plugins Js -->
+        <script th:src="@{/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js}"></script>
+        <script th:src="@{/libs/switchery/switchery.min.js}"></script>
+        <script th:src="@{/libs/multiselect/jquery.multi-select.js}"></script>
+        <script th:src="@{/libs/jquery-quicksearch/jquery.quicksearch.min.js}"></script>
+
+        <script th:src="@{/libs/select2/select2.min.js}"></script>
+        <script th:src="@{/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js}"></script>
+        <script th:src="@{/libs/jquery-mask-plugin/jquery.mask.min.js}"></script>
+        <script th:src="@{/libs/moment/moment.js}"></script>
+        <script th:src="@{/libs/bootstrap-timepicker/bootstrap-timepicker.min.js}"></script>
+        <script th:src="@{/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js}"></script>
+        <script th:src="@{/libs/bootstrap-datepicker/bootstrap-datepicker.min.js}"></script>
+        <script th:src="@{/libs/bootstrap-daterangepicker/daterangepicker.js}"></script>
+        <script th:src="@{/libs/bootstrap-maxlength/bootstrap-maxlength.min.js}"></script>
+
+        <!-- Init js-->
+        <script th:src="@{/js/pages/form-advanced.init.js}"></script>
+
+        <!-- App js -->
+        <script th:src="@{/js/app.min.js}"></script>
+        
+
+</body>
+</html>
